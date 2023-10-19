@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://eytvvyftooca"]
+
+[ext_resource type="PackedScene" uid="uid://pp7q6pvhg4ak" path="res://player.tscn" id="2_86eem"]
+[ext_resource type="Texture2D" uid="uid://cpddknmfdgpeb" path="res://Assets/Tilemap.png" id="2_swksd"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_14i03"]
+texture = ExtResource("2_swksd")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -24, -32, -24, 32, -32, 32)
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(24, -32, 32, -32, 32, 32, 24, 32)
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -12, 20, -12, 20, 32, -24, 32)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -16, 32, -16, 32, -4, -32, -4)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_hmloy"]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_14i03")
+
+[node name="world" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("2_86eem")]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_hmloy")
+cell_quadrant_size = 64
+format = 2
+layer_0/tile_data = PackedInt32Array(262128, 1, 0, 262132, 65537, 0, 262136, 1, 0, 262140, 65537, 0, 196608, 131073, 0, 196612, 65537, 0, 196616, 1, 0, 196620, 1, 0, 196624, 131073, 0, -16, 65537, 1, -65520, 131073, 1, -5, 65537, 2, -196617, 65537, 2, -393230, 65537, 2)
