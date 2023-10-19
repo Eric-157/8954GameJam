@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://eytvvyftooca"]
+[gd_scene load_steps=6 format=3 uid="uid://eytvvyftooca"]
 
 [ext_resource type="PackedScene" uid="uid://pp7q6pvhg4ak" path="res://player.tscn" id="2_86eem"]
 [ext_resource type="Texture2D" uid="uid://cpddknmfdgpeb" path="res://Assets/Tilemap.png" id="2_swksd"]
@@ -46,6 +46,9 @@ texture_region_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_14i03")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_frses"]
+size = Vector2(60, 10)
+
 [node name="world" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_86eem")]
@@ -55,3 +58,12 @@ tile_set = SubResource("TileSet_hmloy")
 cell_quadrant_size = 64
 format = 2
 layer_0/tile_data = PackedInt32Array(262128, 1, 0, 262132, 65537, 0, 262136, 1, 0, 262140, 65537, 0, 196608, 131073, 0, 196612, 65537, 0, 196616, 1, 0, 196620, 1, 0, 196624, 131073, 0, -16, 65537, 1, -65520, 131073, 1, -5, 65537, 2, -196617, 65537, 2, -393230, 65537, 2)
+
+[node name="Area2D" type="Area2D" parent="."]
+disable_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-216, -119)
+shape = SubResource("RectangleShape2D_frses")
+
+[connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
