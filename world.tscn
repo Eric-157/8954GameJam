@@ -1,8 +1,91 @@
-[gd_scene load_steps=10 format=3 uid="uid://eytvvyftooca"]
+[gd_scene load_steps=12 format=3 uid="uid://eytvvyftooca"]
 
 [ext_resource type="PackedScene" uid="uid://pp7q6pvhg4ak" path="res://player.tscn" id="2_86eem"]
 [ext_resource type="Texture2D" uid="uid://b65ec2x3cniww" path="res://Assets/GourdyTileMap.png" id="2_f0285"]
 [ext_resource type="Texture2D" uid="uid://cpddknmfdgpeb" path="res://Assets/Tilemap.png" id="2_swksd"]
+[ext_resource type="Texture2D" uid="uid://dg81cjlthk5h4" path="res://Assets/roughbackground.png" id="4_tepva"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ipwi0"]
+texture = ExtResource("2_f0285")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+5:0/0 = 0
+5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:0/0/physics_layer_0/angular_velocity = 0.0
+6:0/0 = 0
+6:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:0/0/physics_layer_0/angular_velocity = 0.0
+5:1/0 = 0
+5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:1/0/physics_layer_0/angular_velocity = 0.0
+4:1/0 = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+0:4/0 = 0
+0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:4/0/physics_layer_0/angular_velocity = 0.0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-56, 0, 56, 0, 56, 8, -56, 8)
+1:4/0 = 0
+1:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:4/0/physics_layer_0/angular_velocity = 0.0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 0, 24, 0, 24, 8, -32, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:3/0/physics_layer_0/angular_velocity = 0.0
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+2:3/0 = 0
+2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:3/0/physics_layer_0/angular_velocity = 0.0
+3:3/0 = 0
+3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:3/0/physics_layer_0/angular_velocity = 0.0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -88, 16, -88, 16, 64, -8, 64)
+3:4/0 = 0
+3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:4/0/physics_layer_0/angular_velocity = 0.0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -64, 16, -64, 16, -8, -8, -8)
+2:4/0 = 0
+2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:4/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_mbem7"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_ipwi0")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hcqs2"]
 texture = ExtResource("2_f0285")
@@ -142,107 +225,36 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_14i03")
 sources/0 = SubResource("TileSetAtlasSource_hcqs2")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ipwi0"]
-texture = ExtResource("2_f0285")
-texture_region_size = Vector2i(128, 128)
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0 = 0
-1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:0/0/physics_layer_0/angular_velocity = 0.0
-3:0/0 = 0
-3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:0/0/physics_layer_0/angular_velocity = 0.0
-2:0/0 = 0
-2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:0/0/physics_layer_0/angular_velocity = 0.0
-4:0/0 = 0
-4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-4:0/0/physics_layer_0/angular_velocity = 0.0
-5:0/0 = 0
-5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-5:0/0/physics_layer_0/angular_velocity = 0.0
-6:0/0 = 0
-6:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-6:0/0/physics_layer_0/angular_velocity = 0.0
-5:1/0 = 0
-5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-5:1/0/physics_layer_0/angular_velocity = 0.0
-4:1/0 = 0
-4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-4:1/0/physics_layer_0/angular_velocity = 0.0
-2:1/0 = 0
-2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:1/0/physics_layer_0/angular_velocity = 0.0
-1:1/0 = 0
-1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:1/0/physics_layer_0/angular_velocity = 0.0
-0:1/0 = 0
-0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:1/0/physics_layer_0/angular_velocity = 0.0
-0:2/0 = 0
-0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:2/0/physics_layer_0/angular_velocity = 0.0
-1:2/0 = 0
-1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:2/0/physics_layer_0/angular_velocity = 0.0
-2:2/0 = 0
-2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:2/0/physics_layer_0/angular_velocity = 0.0
-0:4/0 = 0
-0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:4/0/physics_layer_0/angular_velocity = 0.0
-0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-56, 0, 56, 0, 56, 8, -56, 8)
-1:4/0 = 0
-1:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:4/0/physics_layer_0/angular_velocity = 0.0
-1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 0, 24, 0, 24, 8, -32, 8)
-1:3/0 = 0
-1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:3/0/physics_layer_0/angular_velocity = 0.0
-0:3/0 = 0
-0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:3/0/physics_layer_0/angular_velocity = 0.0
-2:3/0 = 0
-2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:3/0/physics_layer_0/angular_velocity = 0.0
-3:3/0 = 0
-3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:3/0/physics_layer_0/angular_velocity = 0.0
-3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -88, 16, -88, 16, 64, -8, 64)
-3:4/0 = 0
-3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:4/0/physics_layer_0/angular_velocity = 0.0
-3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -64, 16, -64, 16, -8, -8, -8)
-2:4/0 = 0
-2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:4/0/physics_layer_0/angular_velocity = 0.0
-
-[sub_resource type="TileSet" id="TileSet_mbem7"]
-tile_size = Vector2i(128, 128)
-physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_ipwi0")
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frses"]
-size = Vector2(45, 13)
+size = Vector2(46, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6sa80"]
+size = Vector2(39, 440)
 
 [node name="world" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+offset_left = -671.0
+offset_top = -595.0
+offset_right = 1523.0
+offset_bottom = 704.0
+texture = ExtResource("4_tepva")
 
 [node name="Player" parent="." instance=ExtResource("2_86eem")]
 z_index = 1
 position = Vector2(0, 2)
 
+[node name="Night" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_mbem7")
+format = 2
+layer_0/tile_data = PackedInt32Array(-65530, 0, 4, -196602, 0, 4, -131065, 65536, 4, -262136, 196608, 4, -327672, 196608, 3, -65536, 0, 3, 65535, 0, 1, 65534, 131072, 1, 0, 65536, 1, 2, 65536, 1, 1, 0, 1, 3, 131072, 1, 4, 0, 1, 5, 0, 1, 6, 131072, 1, 7, 65536, 1, 8, 0, 1)
+
 [node name="Day" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_hmloy")
 cell_quadrant_size = 128
 format = 2
-layer_0/tile_data = PackedInt32Array(65533, 327680, 1, 65534, 131072, 0, 65535, 0, 0, 0, 65536, 0, 1, 0, 0, 2, 65536, 0, 3, 131072, 0, 4, 0, 0, 5, 0, 0, 6, 131072, 0, 7, 65536, 0, 8, 0, 0, 9, 262144, 1, -65528, 196608, 0, -65535, 131072, 2, -65536, 65536, 2, -1, 0, 2, -2, 393216, 0, -3, 327680, 0, -65527, 262144, 0, -131070, 131072, 2, -131071, 0, 2, -131073, 65536, 3, -131074, 0, 2, -196608, 131072, 2, -262137, 0, 2, -262136, 65536, 2, -262135, 131072, 2)
-
-[node name="Night" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_mbem7")
-format = 2
-layer_0/tile_data = PackedInt32Array(-65530, 0, 4, -196602, 0, 4, -131065, 65536, 4, -262136, 196608, 4, -327672, 196608, 3)
+layer_0/tile_data = PackedInt32Array(65533, 327680, 1, 65534, 131072, 0, 65535, 0, 0, 0, 65536, 0, 1, 0, 0, 2, 65536, 0, 3, 131072, 0, 4, 0, 0, 5, 0, 0, 6, 131072, 0, 7, 65536, 0, 8, 0, 0, 9, 262144, 1, -65528, 196608, 0, -65535, 131072, 2, -65536, 65536, 2, -1, 0, 2, -2, 393216, 0, -3, 327680, 0, -65527, 262144, 0, -131070, 131072, 2, -131071, 0, 2, -131073, 65536, 3, -131074, 0, 2, -196608, 131072, 2, -262137, 0, 2, -262136, 65536, 2, -262135, 131072, 2, -327675, 65536, 3, -327674, 131072, 2, -327676, 0, 2)
 
 [node name="Area2D" type="Area2D" parent="."]
 disable_mode = 1
@@ -251,4 +263,82 @@ disable_mode = 1
 position = Vector2(-65.5, -326.5)
 shape = SubResource("RectangleShape2D_frses")
 
+[node name="Area2D2" type="Area2D" parent="."]
+disable_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(703, -582)
+shape = SubResource("RectangleShape2D_frses")
+
+[node name="NightTimeText" type="TextEdit" parent="."]
+offset_left = 541.0
+offset_top = -85.0
+offset_right = 744.0
+offset_bottom = -41.0
+text = "Night Time Testing Area"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+
+[node name="TimeSwitch" type="TextEdit" parent="."]
+offset_left = -206.0
+offset_top = -406.0
+offset_right = 68.0
+offset_bottom = -361.0
+text = "Switch day and night (not added)"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+
+[node name="TimeSwitch2" type="TextEdit" parent="."]
+offset_left = 565.0
+offset_top = -655.0
+offset_right = 836.0
+offset_bottom = -610.0
+text = "Switch day and night (not added)"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+
+[node name="ControlsText" type="TextEdit" parent="."]
+offset_left = -240.0
+offset_top = -144.0
+offset_right = 82.0
+offset_bottom = -104.0
+text = "A - left, D - right, Space - jump, Esc - quit"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-283.5, -343)
+shape = SubResource("RectangleShape2D_6sa80")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1179, -209)
+shape = SubResource("RectangleShape2D_6sa80")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1271, -664)
+shape = SubResource("RectangleShape2D_6sa80")
+
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="Player" method="_on_area_2d_body_entered"]
