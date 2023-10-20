@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://pp7q6pvhg4ak"]
+[gd_scene load_steps=7 format=3 uid="uid://pp7q6pvhg4ak"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_abyou"]
 [ext_resource type="Texture2D" uid="uid://do5dc6wyp5f3y" path="res://Assets/gourdy.png" id="2_rucce"]
+[ext_resource type="Texture2D" uid="uid://bpg7cr4pdm6dh" path="res://Assets/gourdyleft.png" id="3_3obfg"]
+[ext_resource type="Texture2D" uid="uid://0vcu34rp86mm" path="res://Assets/gourdyright.png" id="4_uiq4n"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6seqb"]
-radius = 12.0
-height = 34.0
+radius = 18.0
+height = 50.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a74bo"]
 animations = [{
@@ -14,21 +16,41 @@ animations = [{
 "texture": ExtResource("2_rucce")
 }],
 "loop": true,
-"name": &"player",
-"speed": 5.0
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_3obfg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rucce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uiq4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rucce")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 6.0
 }]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_abyou")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_6seqb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.05, 0.05)
+position = Vector2(0, 2.38419e-07)
+scale = Vector2(0.08, 0.08)
 sprite_frames = SubResource("SpriteFrames_a74bo")
-animation = &"player"
+animation = &"idle"
+frame_progress = 0.830981
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-3, 2)
-zoom = Vector2(4, 4)
+zoom = Vector2(3, 3)

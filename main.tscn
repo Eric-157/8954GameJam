@@ -22,5 +22,17 @@ offset_bottom = 262.0
 tooltip_text = "This is the quit button"
 text = "Quit"
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 13.0
+offset_top = -296.0
+offset_right = 519.0
+offset_bottom = -16.0
+text = "Credits:
+Nolan Carey: Programming
+Eric Edwards: Project Lead
+James Hoffman: Music + 3d Models (models not in demo)
+Elizabeth Korj: Artist and Designer
+Nick Osborne: Music and Programming"
+
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
